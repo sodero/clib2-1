@@ -2311,8 +2311,7 @@ tre_make_trans(tre_pos_and_tags_t *p1, tre_pos_and_tags_t *p2,
                     trans++;
                 }
 
-                if (trans->state == NULL)
-                    (trans + 1)->state = NULL;
+                (trans + 1)->state = NULL;
                 /* Use the character ranges, assertions, etc. from `p1' for
                    the transition from `p1' to `p2'. */
                 trans->code_min = p1->code_min;
